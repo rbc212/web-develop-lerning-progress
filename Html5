@@ -11,7 +11,7 @@
 	display: none;
 	-webkit-appearance: none;
 }</style>
-<form>
+<!-- <form>
 <input list="xx1dddd" id="xx1dddd2" autocomplete="on" autofocus action="login.php" placeholder="pleace type the right answer!" >
 </form>
 <datalist id="xx1dddd">
@@ -27,5 +27,43 @@
   <option value="Opera">
   <option value="Safari">
 </datalist>
+
+<form action="login.php" method="get">
+	Phone No.<input type="tel" name="telephone No." title="please tpye 10 numbers" pattern="(^(\d{3,4}-)?\d{7,8})$|(13[0-9]{9})"><br>
+	<input type="submit" name="dosubmit" value="sign up "><br>
+	E-mail:<input type="email" required name="email"><br>
+
+    Date<input type="date" name="datetime" value="2017-10-10"><br></form>
+<!-- this is a demo of range -->
+<form>
+	<input type="range" name="test" value="30" min="0" max="100" step="5" onchange="num.value=value">
+	<output name="num">30</output>
+</form> 
+<form>
+	<input type="color" name="color">
+	<input type="submit" name="dosubmit" value="Submit">
+</form>
+<form>
+	<input type="file" name="submit file" multiple accept="image/*">
+</form>
+<audio controls autoplay>
+
+You browser do not support audio</audio>
 </body>
+You are <mark>beautiful!<br></mark>
+You are beautiful! I mean it!You are beautiful!<wbr> I mean it!You are beautiful! I mean it!<br>
+<progress id="pro1" value="20" min="0" max="100"></progress><br>
+<meter id="pro" high="78" low="25" optimum="100" min="0" max="100" value="30"></meter>
+<script type="text/javascript">
+	var obj = document.getElementById("pro");
+	setInterval(function(){
+		if(obj.value<100){
+			obj.value=obj.value+1
+		}else
+		{obj.value= 0}
+	},100);
+</script><br>
+<ruby>
+	爱<rt>love</rt>
+</ruby>
 </html>
