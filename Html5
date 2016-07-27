@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- this is example of datalist function -->
+	<style>#xx1dddd2::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}</style>
+<form>
+<input list="xx1dddd" id="xx1dddd2" autocomplete="on" autofocus action="login.php" placeholder="pleace type the right answer!" >
+</form>
+<datalist id="xx1dddd">
+	<option value="this is a good example!">
+	<option value="this is a good example!">
+	<option value="this is a good example!">
+</datalist>
+<input list="browsers">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+</body>
+</html>
