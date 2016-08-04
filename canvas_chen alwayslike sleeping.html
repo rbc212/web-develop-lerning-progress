@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas picture</title>
+</head>
+<body bgcolor ="black">
+<canvas id="mycanvas"></canvas>
+	<script>
+var canvas = document.getElementById("mycanvas");
+var ctx = canvas.getContext("2d");
+canvas.height = 1920;
+canvas.width =2980;
+ctx.lineWidth =1;
+for (var i = 0; i < 450; i++) {
+drawFiveStars(Math.random()*10,Math.random()*5,Math.random()*i*10,Math.random()*i*30);
+}
+function drawFiveStars(R,r,x,y){
+ctx.strokeStyle = "#fd5";
+ctx.beginPath();
+for (var i = 0; i<5; i++) {
+	ctx.lineTo(Math.cos((18+i*72)/180*Math.PI)*R+x,-Math.sin((18+i*72)/180*Math.PI)*R+y);
+	ctx.lineTo(Math.cos((54+i*72)/180*Math.PI)*r+x,-Math.sin((54+i*72)/180*Math.PI)*r+y);
+}
+ctx.closePath();
+ctx.lineJoin = "round";
+ctx.stroke();
+ctx.fillStyle ="yellow";
+ctx.fill();
+
+
+}
+ctx.beginPath();
+ctx.arc(1500,200,200,-0.15*Math.PI,0.55*Math.PI);
+ctx.stroke();
+ctx.fillStyle ="yellow";
+ctx.fill();
+ctx.beginPath();
+ctx.font = "40px Arial";
+ctx.fillText("赵晨还在睡觉！",1200,80);
+	</script>
+
+</body>
+</html>
